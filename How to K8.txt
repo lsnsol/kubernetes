@@ -1,0 +1,29 @@
+1. install docker and kubernetes
+2. add kubernetes to path variable for cli commands
+3. kubernetes application is named minikube
+4. either use minikube or docker to boot kubernetes
+5. test docker + kubernetes configuration in local
+6. how to kubernetes basics : https://www.youtube.com/watch?v=s_o8dwzRlu4
+7. kubernetes: node, pod, ip, service, ingress, configMap, secret(no inbuilt encryption from kubernetes), 
+               volumes(storage of data, local or remote outside the k8 cluster and not managed by k8), deployments (for load balancing and availability), 
+               statefulset (for data sharing by databases and maintaing the state of each so that there are no inconsistency)
+8. main node is called "control plane", yaml or json format requests for deployment to be stored with code
+9. deployment and service files : apiVersion, kind, metadata, spec, status (auto created by kubernetes)
+10. metadata: name, labels
+11. spec : replicas, selector, template
+12. etcd : status information of whole K8
+13. minikube and kubectl
+14. Prod Cluster Setup : master and worker nodes
+15. minikube : to run on ONE MACHINE for testing kubernetes
+16. kubectl : command line tool minikube
+17. minikube with docker for easy usage.
+18. download minikube from official website.
+
+Minikube:
+1. minikube start --driver docker :: (first run will take a lot of time because of downloads of necessary images for docker)
+2. minikube status :: (to check the status of the runnig of the minikube)
+3. kubectl get node :: to get the list of nodes running in the cluster
+
+Kubernetes Config:
+1. create configMap, secret, deployment and service for DB (mongoDB or PostGRE), deployment and service for webApp 
+2. create username password for a db in mongo to use or can be used without any creds : https://www.mongodb.com/docs/manual/core/authentication/
